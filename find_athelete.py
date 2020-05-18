@@ -1,8 +1,5 @@
 import sqlalchemy as sa
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.sql import func
-import datetime
 import users
 
 class Athelete(users.Base):
@@ -43,7 +40,7 @@ def request_data():
     """
     Запрашивает у пользователя user_id
     """
-    print("Поиск спортсменов, похожих на одного из пользователей.")
+    print("Поиск атлетов, похожих на одного из пользователей.")
     user_id = input("Ввети идентификатор пользователя: ")
     return int(user_id)
 
