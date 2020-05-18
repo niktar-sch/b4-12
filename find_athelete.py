@@ -59,7 +59,7 @@ def main():
                                   .filter(Athelete.height.isnot(None))\
                                   .order_by(func.abs(Athelete.height - user.height)).first()
         print(f'Ближайший по дате рождения атлет: id: {nearest_birth_athelete.id}, имя: {nearest_birth_athelete.name}, дата рождения: {nearest_birth_athelete.birthdate}')
-        print(f'Ближайший по дате рождения атлет: id: {nearest_height_athelete.id}, имя: {nearest_height_athelete.name}, рост: {nearest_height_athelete.height}')
+        print(f'Ближайший по росту атлет: id: {nearest_height_athelete.id}, имя: {nearest_height_athelete.name}, рост: {nearest_height_athelete.height}')
     else:
         print('Пользовалель с таким id не найден')
 
